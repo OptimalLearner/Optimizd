@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: #3f3d56;
+    border-radius: 0 0 6px 6px;
+}
+.navbar-brand, .first-part-header, .footer-part-header {
+    font-family: 'Seymour One';
+    font-size: 26px;
+    font-weight: 700;
+}
+.first-part-header {
+    color: #3f3d56;
+}
+.footer-part-header {
+    font-size: 20px;
+}
+.navbar-brand > div > span, .first-part-header > span, .footer-part-header > span {
+    color: #62B1F6;
+}
+.navbar-brand > div {
+    color: #FFFFFF;
+}
+.nav-link {
+    font-family: 'Ubuntu';
+}
+.footer {
+    background-color: #3f3d56;
+    font-size: 20px;
+    color: #FFF;
+}
+.first-part {
+    background-color: #F0F8FF;
+    min-height: 100vh;
+    font-family: 'Ubuntu';
+}
+.first-part-illustration-container, .second-part-illustration-container, .about-part-illustration-container {
+    width: 100%;
+    height: 100%;
+}
+.illustration-what-we-do, .illustration-get-started, .illustration-about-project {
+    background-image:url('../assets/location-map.svg');
+    background-size: 90% 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    width: 60vw;
+    height: 60vh;
+}
+.first-part-header {
+    font-size: 40px;
+}
+.hr1, .hr3, .hr4 {
+    width: 30%;
+    border: 2px solid #3f3d56;
+    border-radius: 5px;
+    margin: 2px 0 30px 0;
+}
+.hr2 {
+    width: 25%;
+    border: 2px solid #3f3d56;
+    border-radius: 5px;
+    margin: 65px 0 20px;
+}
+.hr3 {
+    border: 2px solid #fff;
+    background-color: #fff;
+}
+.hr4 {
+    width: 20%;
+    margin: 10px 0 20px;
+}
+.second-part {
+    min-height: 100vh;
+    background-color: #3f3d56;
+    color: #FFF;
+}
+.second-part-header, .third-part-header {
+    font-size: 30px;
+    font-family: 'Ubuntu';
+}
+.second-part-info-container p {
+    font-size: 19px;
+}
+.get-started-btn {
+    width: 50%;
+    background-color: #FFF;
+    color: #3f3d56;
+}
+.illustration-get-started {
+    background-image:url('../assets/location-search.svg');
+}
+.third-part {
+    background-color: #F0F8FF;
+    min-height: 75vh;
+}
+.accordion {
+    width: 100%;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #3f3d56;
+    color: #FFF;
+}
+#calculate {
+    background-color: #F0F8FF;
+    min-height: 100vh;
+    padding-top: 80px;
+    font-family: 'Ubuntu';
+}
+.map-card {
+    width: 90vw;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.map {
+    height: 80vh;
+    width: 100%;
+    border: 3px solid #3f3d56;
+}
+.calculate-btn {
+    width: 100%;
+    background-color: #3f3d56;
+    color: #FFF;
+}
+.calculate-btn:hover {
+    color: #FFF;
+}
+.travel-search-icon {
+    color: #3f3d56;
+    font-size: 100px;
+    margin: 5px 0 20px;
+}
+.result-card, .prev-card {
+    margin: 25px auto 40px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.result-card > .card-body  h3 {
+    font-size: 35px;
+}
+.result-card > .card-body  h5 {
+    font-size: 22px;
+    margin-top: 25px;
+}
+.check-btn {
+    background-color: #3f3d56;
+}
+#about {
+    min-height: 100vh;
+    font-family: 'Ubuntu';
+    background-color: #F0F8FF;
+    color: #111;
+}
+.about-project-content > p {
+    font-size: 20px;
+    text-align: center;
+}
+.illustration-about-project {
+    background-image:url('../assets/about-project.svg');
+}
+@media screen and (max-width: 480px) {
+    .first-part > div:first-child {
+       margin: 90px 0 0 !important;
+    }
+    .first-part-header, .second-part-header, .third-part-header {
+        font-size: 25px;
+    }
+    .first-part-info-container > h4 {
+        padding: 0 15px;
+        font-size: 20px;
+    }
+    .illustration-what-we-do, .illustration-get-started {
+        width: 80vw;
+        height: 300px;
+    }
+    .default-location-table th, .default-location-table td {
+        font-size: 18px;
+    }
+    .second-part-info-container p {
+        padding: 0 10px;
+        font-size: 16px;
+    }
+    .result-card > .card-body  h3 {
+        font-size: 25px;
+    }
+    .result-card > .card-body  h5 {
+        font-size: 17px;
+    }
+    .about-part-illustration-container {
+        margin-top: 40px;
+        height: 30vh;
+    }
+    .about-project-content > p {
+        font-size: 15px;
+        text-align: justify;
+    }
+    .footer {
+        font-size: 16px;
+    }
+}

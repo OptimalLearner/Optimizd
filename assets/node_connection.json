@@ -1,0 +1,284 @@
+{
+    "connection": [
+        {
+            "source": "Mumbai",
+            "destination": "Panaji",
+            "distance": "571",
+            "time": "10:39",
+            "cost": ""
+        },
+        {
+            "source": "Panaji",
+            "destination": "Thiruvananthapuram",
+            "distance": "984",
+            "time": "23:30",
+            "cost": ""
+        },
+        {
+            "source": "Thiruvananthapuram",
+            "destination": "Chennai",
+            "distance": "768",
+            "time": "13:16",
+            "cost": ""
+        },
+        {
+            "source": "Chennai",
+            "destination": "Visakhapatnam",
+            "distance": "827",
+            "time": "13:42",
+            "cost": ""
+        },
+        {
+            "source": "Visakhapatnam",
+            "destination": "Cuttack",
+            "distance": "468",
+            "time": "7:45",
+            "cost": ""
+        },
+        {
+            "source": "Cuttack",
+            "destination": "Kolkata",
+            "distance": "420",
+            "time": "6:34",
+            "cost": ""
+        },
+        {
+            "source": "Kolkata",
+            "destination": "Guwahati",
+            "distance": "1007",
+            "time": "18:44",
+            "cost": ""
+        },
+        {
+            "source": "Guwahati",
+            "destination": "Patna",
+            "distance": "880",
+            "time": "16:28",
+            "cost": ""
+        },
+        {
+            "source": "Patna",
+            "destination": "Varanasi",
+            "distance": "245",
+            "time": "5:24",
+            "cost": ""
+        },
+        {
+            "source": "Varanasi",
+            "destination": "Lucknow",
+            "distance": "401",
+            "time": "5:33",
+            "cost": ""
+        },
+        {
+            "source": "Lucknow",
+            "destination": "Nainital",
+            "distance": "384",
+            "time": "8:15",
+            "cost": ""
+        },
+        {
+            "source": "Nainital",
+            "destination": "Shimla",
+            "distance": "636",
+            "time": "11:18",
+            "cost": ""
+        },
+        {
+            "source": "Shimla",
+            "destination": "Srinagar",
+            "distance": "630",
+            "time": "12:30",
+            "cost": ""
+        },
+        {
+            "source": "Srinagar",
+            "destination": "Amritsar",
+            "distance": "483",
+            "time": "8:32",
+            "cost": ""
+        },
+        {
+            "source": "Amritsar",
+            "destination": "Bikaner",
+            "distance": "513",
+            "time": "11:39",
+            "cost": ""
+        },
+        {
+            "source": "Bikaner",
+            "destination": "Jaipur",
+            "distance": "342",
+            "time": "7:20",
+            "cost": ""
+        },
+        {
+            "source": "Jaipur",
+            "destination": "Kota",
+            "distance": "251",
+            "time": "4:34",
+            "cost": ""
+        },
+        {
+            "source": "Kota",
+            "destination": "Bhuj",
+            "distance": "834",
+            "time": "13:58",
+            "cost": ""
+        },
+        {
+            "source": "Bhuj",
+            "destination": "Ahmedabad",
+            "distance": "334",
+            "time": "6:01",
+            "cost": ""
+        },
+        {
+            "source": "Ahmedabad",
+            "destination": "Surat",
+            "distance": "271",
+            "time": "4:30",
+            "cost": ""
+        },
+        {
+            "source": "Surat",
+            "destination": "Mumbai",
+            "distance": "276",
+            "time": "4:29",
+            "cost": ""
+        },
+        {
+            "source": "Kota",
+            "destination": "Bhopal",
+            "distance": "342",
+            "time": "7:53",
+            "cost": ""
+        },
+        {
+            "source": "Bhopal",
+            "destination": "Nagpur",
+            "distance": "351",
+            "time": "7:00",
+            "cost": ""
+        },
+        {
+            "source": "Nagpur",
+            "destination": "Raipur",
+            "distance": "284",
+            "time": "5:13",
+            "cost": ""
+        },
+        {
+            "source": "Raipur",
+            "destination": "Cuttack",
+            "distance": "545",
+            "time": "10:39",
+            "cost": ""
+        },
+        {
+            "source": "Raipur",
+            "destination": "Jamshedpur",
+            "distance": "664",
+            "time": "11:37",
+            "cost": ""
+        },
+        {
+            "source": "Jamshedpur",
+            "destination": "Kolkata",
+            "distance": "281",
+            "time": "5:16",
+            "cost": ""
+        },
+        {
+            "source": "Nagpur",
+            "destination": "Mumbai",
+            "distance": "843",
+            "time": "15:47",
+            "cost": ""
+        },
+        {
+            "source": "Patna",
+            "destination": "Jamshedpur",
+            "distance": "445",
+            "time": "9:11",
+            "cost": ""
+        },
+        {
+            "source": "Nainital",
+            "destination": "New Delhi",
+            "distance": "315",
+            "time": "5:57",
+            "cost": ""
+        },
+        {
+            "source": "New Delhi",
+            "destination": "Agra",
+            "distance": "220",
+            "time": "2:39",
+            "cost": ""
+        },
+        {
+            "source": "Agra",
+            "destination": "Jaipur",
+            "distance": "247",
+            "time": "4:18",
+            "cost": ""
+        },
+        {
+            "source": "Bikaner",
+            "destination": "Bhuj",
+            "distance": "981",
+            "time": "16:59",
+            "cost": ""
+        },
+        {
+            "source": "Nagpur",
+            "destination": "Hyderabad",
+            "distance": "499",
+            "time": "8:16",
+            "cost": ""
+        },
+        {
+            "source": "Hyderabad",
+            "destination": "Bengaluru",
+            "distance": "567",
+            "time": "9:27",
+            "cost": ""
+        },
+        {
+            "source": "Chennai",
+            "destination": "Bengaluru",
+            "distance": "346",
+            "time": "5:59",
+            "cost": ""
+        },
+        {
+            "source": "Bengaluru",
+            "destination": "Coimbatore",
+            "distance": "367",
+            "time": "6:16",
+            "cost": ""
+        },
+        {
+            "source": "Coimbatore",
+            "destination": "Thiruvananthapuram",
+            "distance": "384",
+            "time": "7:55",
+            "cost": ""
+        },
+        {
+            "source": "Bengaluru",
+            "destination": "Panaji",
+            "distance": "588",
+            "time": "10:46",
+            "cost": ""
+        },
+        {
+            "source": "Bhopal",
+            "destination": "Varanasi",
+            "distance": "949",
+            "time": "14:27",
+            "cost": ""
+        }
+    ]
+}

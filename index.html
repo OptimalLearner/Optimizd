@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Optimizd | The Optimal Route Finder </title>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get the optimal route and distance between Indian cities">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Leaflet JS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <!-- Leaflet JS Easy Button CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.min.css" integrity="sha512-Dl8Sq3zeaW4/XeowsD/0Fyn07Cy+1yJlG4/Bs8Lt91P2gZGB3lemVScG8dsNi2pIwhDwuTR22RGumk72cd5OhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.min.js" integrity="sha512-Tndo4y/YJooD/mGXS9D6F1YyBcSyrWnnSWQ5Z9IcKt6bljicjyka9qcP99qMFbQ5+omfOtwwIapv1DjBCZcTJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Leaflet JS Fullscreen CDN -->
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <!-- Custom CSS Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Custom JS Script -->
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="main-content">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <div class="container-md container-fluid">
+            <span class="navbar-brand ms-md-3 me-md-5 pe-md-5"> <div><span>O</span>ptimizd</div> </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav me-auto mb-2 mb-lg-0" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active px-3" id="home-tab" data-bs-toggle="tab" type="button" data-bs-target="#home"  role="tab" aria-controls="home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link px-3"  id="calculate-tab" data-bs-toggle="tab" type="button" data-bs-target="#calculate" role="tab" aria-controls="calculate" aria-selected="false">Calculate Distance</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link px-3" id="about-tab" data-bs-toggle="tab" type="button" data-bs-target="#about" role="tab" aria-controls="about" aria-selected="false">About The Project</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row m-0 first-part">
+                <div class="col-12 col-md-5 offset-md-1 first-part-info-container d-flex justify-content-center align-items-center flex-column mb-5 mb-md-0">
+                    <h2 class="first-part-header"> <span>O</span>ptimizd </h2>
+                    <hr class="hr1" />
+                    <h4 class="text-center mr-3 mb-2"> With this optimal distance calculator, you can easily find out the distance between two Indian cities. </h4>
+                    <h4 class="text-center mr-3 my-2"> This lets you know how far you are from the destination. </h4>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="first-part-illustration-container d-flex justify-content-center align-items-center">
+                        <div class="illustration-what-we-do"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0 second-part">
+                <div class="col-12 col-md-5 offset-md-1">
+                    <div class="second-part-illustration-container d-flex justify-content-center align-items-center">
+                        <div class="illustration-get-started"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 offset-md-1 second-part-info-container d-flex justify-content-center align-items-center flex-column mb-5 mb-md-0">
+                    <h2 class="second-part-header"> Get Started </h2>
+                    <hr class="hr3" />
+                    <p class="text-center mr-3 mb-2"> You just need to enter the desired locations and you'll get the shortest or the optimal distance between the two location. This can be used a helpful tool for planning your routes. </p>
+                    <p class="text-center mr-3 mb-2"> So, get started and know how far you are from your destination. </p>
+                    <button type="button" class="btn get-started-btn d-flex justify-content-center align-items-center mt-4">Get Started Here <span class="material-icons">arrow_right_alt</span> </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="calculate" role="tabpanel" aria-labelledby="calculate-tab">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <div class="card map-card mx-3 mx-md-5 mb-3">
+                    <div class="card-img-top map" id="mapid"></div>
+                    <div class="card-body">
+                        <div class="row card-title mt-3">
+                            <div class="col-md-5 col-12 mb-3 mb-md-1">
+                                <select class="source-dropdown form-select" aria-label="Default select example">
+                                    <option value="default" selected>Select Source</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5 col-12 mb-3 mb-md-1">
+                                <select class="destination-dropdown form-select" aria-label="Default select example">
+                                    <option value="default" selected>Select Destination</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 col-12 mb-1">
+                                <button type="button" class="btn calculate-btn d-flex justify-content-center align-items-center">Calculate<span class="material-icons ps-2">calculate</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10 offset-1 card result-card">
+                            <div class="card-body d-flex justify-content-center align-items-center flex-column text-center">
+                                <span class="material-icons travel-search-icon">location_searching</span>
+                                <div class="result-data">
+                                    <h3> No Result Available! </h3>
+                                    <h5> Please enter the source and destination to get the optimal route and distance between the two locations. </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 offset-1 card prev-card">
+                            <div class="card-body d-flex justify-content-center align-items-center flex-column text-center px-0">
+                                <h2 class="pt-4"> COVID-19 Stats </h2>
+                                <p> ( For Destination Location in Last 24 Hours ) </p>
+                                <hr class="hr4" />
+                                <div class="row cov-results w-100" style="font-size: 21px;">
+
+                                    <div class="row w-100">
+                                        <div class="col-md-8 col-12 offset-md-2 offset-0">
+                                            <div class="alert alert-primary d-flex align-items-center justify-content-center" role="alert">
+                                                <span class="material-icons"> highlight_off </span>
+                                                <div class="ps-2"> No Data Available! </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 offset-1 card prev-card">
+                            <div class="card-body d-flex justify-content-center align-items-center flex-column text-center">
+                                <h2 class="pt-4"> Most Recent Searches </h2>
+                                <hr class="hr4" />
+                                <div class="row prev-results w-100" style="font-size: 21px;">
+                                    <div class="row w-100">
+                                        <div class="col-md-8 col-12 offset-md-2 offset-0">
+                                            <div class="alert alert-primary d-flex align-items-center justify-content-center" role="alert">
+                                                <span class="material-icons"> highlight_off </span>
+                                                <div class="ps-2"> No Recent Searches Available! </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <div class="row m-0" style="height: 100vh;">
+                <div class="col-12 col-md-6">
+                    <div class="about-part-illustration-container d-flex justify-content-center align-items-center">
+                        <div class="illustration-about-project"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 px-5 d-flex justify-content-center align-items-center flex-column about-project-content">
+                    <h2> About The Project </h2>
+                    <hr class="hr1" />
+                    <p class="mb-3"> This Optimized Distance Calculator helps to calculate the optimal travel route by road between Indian cities. Dijkstra's single source shortest path algorithm is being used to calculate the optimal route between two cities. </p>
+                    <p class="mb-3"> This project was built to demonstrate the use of Data Structures in real life applications. Different Indian cities are cosidered as nodes and path between them are considered as edges. These nodes connect with each other through various edges to form a graph. A doubly linked list is used as to store the recently searched results. </p>
+                    <p> <strong>Tech Stacks Used: </strong> HTML, CSS, Bootstrap, Javascript, Leaflet.JS </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="text-center py-3">
+            &copy; All Rights Reserved by <strong class="footer-part-header"><span>O</span>ptimizd</strong>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
