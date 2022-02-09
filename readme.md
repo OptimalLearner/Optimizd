@@ -1,6 +1,8 @@
 # Optimizd - Optimal Distance Calculator
 **Optimizd** is a web application that provides the optimal travel route by road between Indian cities. Graph data structure is used to represent the network of roads connected with different cities. I have used Leaflet JS to embed interactive map to the application. The cities representes the vertices of the graph and the connections between these cities represents the edges. Dijkstra's single source shortest path algorithm is being used to calculate the optimal route between two cities. Doubly linked list is used to store the recently searched results with each recent search being stored as a node. When a new search is made, the search result get inserted to the beginning of the doubly linked list. COVID-19 stats are also being displayed for the destination location selected. This project was built to demonstrate the use of Data Structures in real life applications. 
 
+**Visit the live app:** [View on GitHub Pages](https://optimallearner.github.io/Optimizd/)
+
 **Tech Stack Used:** HTML 5, CSS, JavaScript, Bootstrap 5, Leaflet.js  
 **APIs Used:** [COVID-19 API](https://github.com/covid19india/api)  
 **Vector illustrations** used in the project are taken from [undraw.co](https://undraw.co/)
