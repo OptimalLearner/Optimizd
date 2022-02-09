@@ -119,14 +119,13 @@ window.onload = () => {
                 </div>
                 <div class="row">
                     <div class="col-md-4 offset-md-1 text-start"> <strong>Lockdown:</strong> </div>
-                    <div class="col-md-7 text-start"> Yes </div>
+                    <div class="col-md-7 text-start"> ${(confirmed != '-' && confirmed > 5000) ? 'Yes' : 'No'} </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 offset-md-1 text-start"> <strong>Rules:</strong> </div>
                         <div class="col-md-7 text-start">
                             <ol>
                                 <li> Mask Compulsory </li>
-                                <li> Shops open between 7 A.M. to 5 P.M. </li>
                                 <li> Unnecesary roaming not allowed </li>
                             </ol>
                         </div>
